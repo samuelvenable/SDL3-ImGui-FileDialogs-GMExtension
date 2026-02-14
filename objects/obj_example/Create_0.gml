@@ -1,12 +1,3 @@
-if (os_type == os_macosx || os_type == os_linux) {
-  window_set_fullscreen(true);
-} else if (os_type == os_windows) {
-  window_set_fullscreen(false);
-  window_set_showborder(false);
-}
-window_set_rectangle(0, 0, display_get_width(), display_get_height());
-surface_resize(application_surface, display_get_width(), display_get_height());
-
 // Ubuntu export needs packages installed to work
 // Run the following terminal command to install:
 // sudo apt update && sudo apt install libgtk-3-dev libglib2.0-dev
@@ -25,7 +16,7 @@ DialogSetLocaleToAmericanEnglish();
 //DialogSetLocaleToBrazilianPortuguese();
 
 // Set Window Size for Dialogs
-DialogSetWindowSize(720, 424);
+DialogSetWindowSize(720, 394);
 
 // Do Not Display File Dialogs in Borderless Mode (Default Behavior):
 EnvironmentSetVariable("IMGUI_DIALOG_NOBORDER", string(false));
