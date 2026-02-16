@@ -22,7 +22,7 @@
   "option_mac_interpolate_pixels": true,
   "option_mac_menu_dock": false,
   "option_mac_min_version": "10.10",
-  "option_mac_output_dir": "~/IMFileDialogs",
+  "option_mac_output_dir": "~/.config/IMFileDialogs",
   "option_mac_resize_window": false,
   "option_mac_scale": 1,
   "option_mac_signing_identity": "",
