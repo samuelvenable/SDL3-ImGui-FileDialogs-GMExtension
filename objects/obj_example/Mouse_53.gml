@@ -1,11 +1,17 @@
 // Show OK-Only Message Box
-if (nDialogId == 0) ShowMessage("This is a dialog box. Click OK to continue.");
+if (nDialogId == 0) { nDialogResult = ShowMessage("This is a dialog box. Click OK to continue.");
+if (nDialogResult == 1) ShowMessage("OK"); }
 
 // Show Yes/No Question Box
-if (nDialogId == 1) ShowQuestion("Here is a question box. Yes or no?");
+if (nDialogId == 1) { nDialogResult = ShowQuestion("Here is a question box. Yes or no?");
+if (nDialogResult == 0) ShowMessage("No");
+if (nDialogResult == 1) ShowMessage("Yes"); }
 
 // Show Yes/No/Cancel Question Box
-if (nDialogId == 2) ShowQuestionExt("Here is yet another question box. Yes, no, or cancel?");
+if (nDialogId == 2) { nDialogResult = ShowQuestionExt("Here is yet another question box. Yes, no, or cancel?");
+if (nDialogResult == -1) ShowMessage("Cancel");
+if (nDialogResult ==  0) ShowMessage("No");
+if (nDialogResult ==  1) ShowMessage("Yes"); }
 
 // Set Filter For File Dialogs
 lpFilter = "Supported Image Files (*.png *.gif *.jpg *.jpeg)|*.png;*.gif;*.jpg;*.jpeg|PNG Image Files (*.png)|*.png|GIF Image Files (*.gif)|*.gif|JPEG Image Files (*.jpg *.jpeg)|*.jpg;*.jpeg";
