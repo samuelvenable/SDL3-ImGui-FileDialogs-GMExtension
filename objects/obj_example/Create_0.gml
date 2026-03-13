@@ -15,8 +15,14 @@ DialogSetLocaleToAmericanEnglish();
 //DialogSetLocaleToSimplifiedChinese();
 //DialogSetLocaleToBrazilianPortuguese();
 
-// Set Window Size for Dialogs
+// Set Window Size for Dialogs:
 DialogSetWindowSize(720, 394);
+
+// Set Title Bar Caption of Non-File-or-Directory-Selection Dialogs:
+EnvironmentSetVariable("IMGUI_DIALOG_CAPTION", window_get_caption());
+
+// Embed All Dialogs in Main Game Window (Windows-Only):
+EnvironmentSetVariable("IMGUI_DIALOG_EMBEDDED", string(true));
 
 // Do Not Display File Dialogs in Borderless Mode (Default Behavior):
 EnvironmentSetVariable("IMGUI_DIALOG_NOBORDER", string(false));
@@ -24,12 +30,12 @@ EnvironmentSetVariable("IMGUI_DIALOG_NOBORDER", string(false));
 // Do Not Display Any Dialog as a Fullscreen Window (Default Behavior):
 EnvironmentSetVariable("IMGUI_DIALOG_FULLSCREEN", string(false));
 
-// Select a Custom Theme for All Dialogs 
+// Select a Custom Theme for All Dialogs: 
 // Classic=-1, Dark=0, Light=1, Custom=2
 // Example themes -1 to 1 are from ImGui
 EnvironmentSetVariable("IMGUI_DIALOG_THEME", string(2));
 
-// Set the Custom Color Theme 
+// Set the Custom Color Theme:
 // Color Scheme (R,G,B=0,1,2) 
 EnvironmentSetVariable("IMGUI_TEXT_COLOR_0", string(1));
 EnvironmentSetVariable("IMGUI_TEXT_COLOR_1", string(1));

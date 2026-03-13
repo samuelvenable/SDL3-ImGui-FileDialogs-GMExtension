@@ -1,3 +1,4 @@
+application_surface_enable(false);
 display_set_gui_size(window_get_width(), window_get_height());
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
