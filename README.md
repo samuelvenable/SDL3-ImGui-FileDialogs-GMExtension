@@ -1,4 +1,4 @@
-# IMFileDialogs GameMaker Extension
+# SDL3 ImGui File Dialogs GameMaker Extension
 Create Dear ImGui Dialog Boxes, (Both File Selection and Beyond), in GameMaker
 
 ![screenshot0.png](screenshots/screenshot0.png)
